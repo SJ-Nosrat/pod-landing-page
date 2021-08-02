@@ -123,6 +123,10 @@ img {
     color: var(--charcoal-black-color);
 }
 
+.main-content__input:focus {
+    outline: 0.25rem solid #54E6AF;
+}
+
 
 @media (min-width: 768px) {
     body {
