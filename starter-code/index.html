@@ -19,22 +19,26 @@
 <body>
   <header class="pod-logo">
     <img src="./assets/desktop/logo.svg" alt="pod logo" class="pod-logo__img">
-    <span class="pod-logo__word">pod</span>
   </header>
-  <main>
-    <section class="info-box">
-      <h1 class="info-box__heading">Publish your podcasts everywhere.</h1>
+  <main class="main-content">
+    <h1 class="main-content__heading">Publish your podcasts <span>everywhere</span>.</h1>
 
-      <p class="info-box__desc">
-        Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify,
-        Apple Podcasts, Google Podcasts, Pocket Casts and more!
-      </p>
+    <p class="main-content__desc">
+      Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify,
+      Apple Podcasts, Google Podcasts, Pocket Casts and more!
+    </p>
 
-      <form action="#" class="info-box__form">
-        <input type="email" id="e-mail" name="user_email" placeholder="Email Address" required>
-        <button type="submit" class="info-box__button info-box__button--active">Request access</button>
-      </form>
-    </section>
+    <ul class="main-content__links">
+      <li><a href="#"> <img src="./assets/desktop/spotify.svg" alt="spotify logo" class="spotify"> </a></li>
+      <li><a href="#"><img src="./assets/desktop/apple-podcast.svg" alt="apple podcast logo" class="apple"></a></li>
+      <li><a href="#"><img src="./assets/desktop/google-podcasts.svg" alt="google podcasts log"></a></li>
+      <li><a href="#"><img src="./assets/desktop/pocket-casts.svg" alt="pocket casts logo" class="pocket-casts"></a></li>
+    </ul>
+
+    <form action="#" class="main-content__form">
+      <input type="email" id="e-mail" name="user_email" placeholder="Email address" class="main-content__input" required>
+      <button type="submit" class="main-content__btn main-content__btn--active">Request access</button>
+    </form>
   </main>
 </body>
 

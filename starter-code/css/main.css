@@ -36,6 +36,10 @@ body {
     font-family: 'Chivo', sans-serif;
     font-size: var(--body-font-18);
     font-weight: var(--body-font-weight);
+    background-image: linear-gradient(to bottom, rgba(18, 23, 37, 0.9), rgba(18, 23, 37, 0.9)),
+    url(../assets/mobile/image-host.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 img {
@@ -44,35 +48,39 @@ img {
 
 .pod-logo {
     display: grid;
-    grid-template-areas: 
-        "pod-img pod-word";
-        grid-template-rows: 3.5rem;
     justify-content: center;
-    margin: 3.75rem 7.5rem;
+    padding: 3.75rem 7.5rem;
 }
 
-.pod-logo__img {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.pod-logo__word {
-    grid-column: 1;
-    grid-row: 1;
-    font-size: 2.4rem;
-    align-self: center;
-    margin-left: 4.375rem;
-}
-
-main {
+.main-content {
     display: grid;
     justify-content: center;
-    align-content: center;
+    grid-template-rows: 0.5fr 0.75fr repeat(2, 0.5fr);
 }
 
 .main-content__heading,
 .main-content__desc {
     text-align: center;
+}
+
+.main-content__heading {
+    color: var(--neon-green-color);
+    font-size: 1.625rem;
+    line-height: 2.375rem;
+    font-weight: var(--body-font-weight);
+    text-transform: uppercase;
+    margin: 0 1.5rem 1rem;
+}
+
+.main-content__heading > span {
+    color: var(--white-white-color);
+}
+
+.main-content__desc {
+    color: var(--soft-blue-color);
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    margin: 0 1.5rem 2.0625rem;
 }
 
 .main-content__form {
@@ -85,9 +93,41 @@ main {
     justify-content: center;
     align-items: center;
     column-gap: 1.25rem;
-    margin: 0 1.875rem;
+    margin: 0 1.875rem 3rem;
 }
 
-.main-content__links > li {
-    /* width: 3.5rem; */
+.main-content__input,
+.main-content__btn {
+    display: block;
+    width: 20.4375rem;
+    height: 2.875rem;
+    margin: 0 1.5rem;
+    border-style: none;
+    border-radius: 1.5rem;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: var(--title-font-weight);
+}
+
+.main-content__input {
+    background-color: var(--soft-grey-color);
+    color: var(--white-white-color);
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    
+}
+
+.main-content__btn {
+    text-align: center;
+    background-color: var(--neon-green-color);
+    color: var(--charcoal-black-color);
+}
+
+
+@media (min-width: 768px) {
+    body {
+        background-position: top right;
+        background-image: url(../assets/tablet/image-host.jpg);
+        background-size: auto;
+    }
 }
