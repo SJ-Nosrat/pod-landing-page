@@ -37,9 +37,14 @@ body {
     font-size: var(--body-font-18);
     font-weight: var(--body-font-weight);
     background-image: linear-gradient(to bottom, rgba(18, 23, 37, 0.9), rgba(18, 23, 37, 0.9)),
-    url(../assets/mobile/image-host.jpg);
+        url(../assets/mobile/image-host.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    min-height: 100vh;
 }
 
 img {
@@ -72,7 +77,7 @@ img {
     margin: 0 1.5rem 1rem;
 }
 
-.main-content__heading > span {
+.main-content__heading>span {
     color: var(--white-white-color);
 }
 
@@ -85,6 +90,7 @@ img {
 
 .main-content__form {
     justify-self: center;
+    position: relative;
 }
 
 .main-content__links {
@@ -114,24 +120,205 @@ img {
     color: var(--white-white-color);
     margin-bottom: 1rem;
     padding-left: 2rem;
-    
+
 }
 
 .main-content__btn {
     text-align: center;
     background-color: var(--neon-green-color);
     color: var(--charcoal-black-color);
+    margin-bottom: 1.5rem;
 }
 
 .main-content__input:focus {
     outline: 0.25rem solid #54E6AF;
 }
 
+.main-content__btn:hover,
+.main-content__btn:focus,
+.main-content__btn:active {
+    background-color: #B3FFE2;
+    cursor: pointer;
+}
+
+.error-msg {
+    color: #FB3E3E;
+    font-size: 0.75rem;
+    line-height: 0.9rem;
+    position: absolute;
+    bottom: 8.75rem;
+    left: 3.5rem;
+}
+
 
 @media (min-width: 768px) {
     body {
-        background-position: top right;
-        background-image: url(../assets/tablet/image-host.jpg);
+        background-image: url(../assets/tablet/image-host.jpg),
+            url(../assets/desktop/bg-pattern-dots.svg);
+        background-position: top right, bottom left 2rem;
         background-size: auto;
+        background-color: var(--charcoal-black-color);
+    }
+
+    .pod-logo {
+        justify-content: start;
+        padding: 3.125rem 0 0 2.4375rem;
+        margin-bottom: 9.5rem;
+    }
+
+    .main-content {
+        background-color: var(--charcoal-black-color);
+        grid-template-columns: 1fr;
+        justify-content: start;
+        width: 40rem;
+    }
+
+    .main-content__heading {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        text-align: left;
+        margin: 5.8125rem 0 1.9375rem 2.4375rem;
+    }
+
+    .main-content__desc {
+        font-size: var(--body-font-18);
+        text-align: left;
+        line-height: var(--body-line-height);
+        margin: 0 0 2.5rem 2.4375rem;
+    }
+
+    .main-content__form {
+        position: relative;
+        justify-self: start;
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .main-content__input,
+    .main-content__btn {
+        display: inline;
+    }
+
+    .main-content__input {
+        width: 26.6875rem;
+        height: 3.5rem;
+        margin: 0 0 4rem 2.4375rem;
+    }
+
+    .main-content__btn {
+        position: absolute;
+        width: 10.125rem;
+        height: 2.875rem;
+        top: 5px;
+        left: calc(26.6875rem - 9.5rem);
+    }
+
+    .main-content__links {
+        justify-content: flex-start;
+        margin: 0 0 1.5rem 2.4375rem;
+    }
+
+    .error-msg {
+        color: #FB3E3E;
+        font-size: 0.75rem;
+        line-height: 0.9rem;
+        position: absolute;
+        top: 3.95rem;
+        left: 4.4375rem;
+    }
+
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+    body {
+        background-image: url(../assets/tablet/image-host.jpg), 
+            url(../assets/desktop/bg-pattern-dots.svg);
+        background-position: top right, top left 15rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    body {
+        background-image: none
+    }
+
+    .container {
+        margin: 0 auto;
+        max-width: 90rem;
+        position: relative;
+        display: grid;
+        grid-template-columns: 0.15fr 1fr 0.15fr;
+        grid-template-rows: 0.25fr 40rem 0.25fr;
+        place-content: center;
+    }
+
+    .pod-logo {
+        grid-column: 2;
+        grid-row: 2;
+        margin: 0;
+        padding: 0;
+        margin-left: 3rem;
+    }
+
+    .main-content__heading {
+        width: 55rem;
+    }
+
+    .main-content {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        position: absolute;
+        width: 45.1875rem;
+        height: 31.8125rem;
+        align-self: end;
+        padding-left: 3rem;
+    }
+
+    .main-content__desc {
+        width: 30rem;
+    }
+
+    .img-container,
+    .bg-pattern-con {
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-attachment: unset;
+    }
+
+    .img-container {
+        background-image: url(../assets/desktop/bg-pattern-dots.svg),
+            url(../assets/desktop/image-host.jpg);
+        background-position: bottom -3rem right, center right;
+        grid-row: 2;
+        grid-column: 2 / 4;
+    }
+
+    .bg-pattern-con {
+        background-image: url(../assets/desktop/bg-pattern-dots.svg);
+        background-position: top -3rem right;
+        grid-column: 2 / 4;
+        grid-row: 3;
+        z-index: -1;
+    }
+
+
+}
+
+@media (min-width: 1500px) {
+
+    .pod-logo__img {
+        max-width: none;
+    }
+
+    .main-content__heading {
+        width: auto;
+    }
+
+    .main-content__desc {
+        width: 35rem;
+    }
+
+    .main-content__links {
+        column-gap: 3rem;
     }
 }

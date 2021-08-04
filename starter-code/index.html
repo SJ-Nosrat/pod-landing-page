@@ -17,29 +17,31 @@
 </head>
 
 <body>
-  <header class="pod-logo">
-    <img src="./assets/desktop/logo.svg" alt="pod logo" class="pod-logo__img">
-  </header>
-  <main class="main-content">
-    <h1 class="main-content__heading">Publish your podcasts <span>everywhere</span>.</h1>
-
-    <p class="main-content__desc">
-      Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify,
-      Apple Podcasts, Google Podcasts, Pocket Casts and more!
-    </p>
-
-    <ul class="main-content__links">
-      <li><a href="#"> <img src="./assets/desktop/spotify.svg" alt="spotify logo" class="spotify"> </a></li>
-      <li><a href="#"><img src="./assets/desktop/apple-podcast.svg" alt="apple podcast logo" class="apple"></a></li>
-      <li><a href="#"><img src="./assets/desktop/google-podcasts.svg" alt="google podcasts log"></a></li>
-      <li><a href="#"><img src="./assets/desktop/pocket-casts.svg" alt="pocket casts logo" class="pocket-casts"></a></li>
-    </ul>
-
-    <form action="#" class="main-content__form">
-      <input type="email" id="e-mail" name="user_email" placeholder="Email address" class="main-content__input" required>
-      <button type="submit" class="main-content__btn main-content__btn--active">Request access</button>
-    </form>
-  </main>
+  <div class="container">
+    <header class="pod-logo">
+      <img src="./assets/desktop/logo.svg" alt="pod logo" class="pod-logo__img">
+    </header>
+    <main class="main-content">
+      <h1 class="main-content__heading">Publish your podcasts <span aria-hidden="true">everywhere</span>.</h1>
+      <p class="main-content__desc">
+        Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify,
+        Apple Podcasts, Google Podcasts, Pocket Casts and more!
+      </p>
+      <ul class="main-content__links">
+        <li><a href="#"> <img src="./assets/desktop/spotify.svg" alt="spotify logo" class="spotify"> </a></li>
+        <li><a href="#"><img src="./assets/desktop/apple-podcast.svg" alt="apple podcast logo" class="apple"></a></li>
+        <li><a href="#"><img src="./assets/desktop/google-podcasts.svg" alt="google podcasts log"></a></li>
+        <li><a href="#"><img src="./assets/desktop/pocket-casts.svg" alt="pocket casts logo" class="pocket-casts"></a></li>
+      </ul>
+      <form action="#" class="main-content__form">
+        <input type="email" id="e-mail" name="user_email" placeholder="Email address" class="main-content__input">
+        <button type="submit" class="main-content__btn main-content__btn--active">Request access</button>
+        <span aria-hidden="true" class="error-msg">Oops! Please check your email</span>
+      </form>
+    </main>
+    <div aria-hidden="true" class="bg-pattern-con"></div>
+    <div aria-hidden="true" class="img-container"></div>
+  </div>
 </body>
 
 </html>
