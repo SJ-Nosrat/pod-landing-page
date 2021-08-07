@@ -150,7 +150,6 @@ img {
     left: 3.5rem;
 }
 
-
 @media (min-width: 768px) {
     body {
         background-image: url(../assets/tablet/image-host.jpg),
@@ -247,7 +246,7 @@ img {
         max-width: 90rem;
         position: relative;
         display: grid;
-        grid-template-columns: 0.15fr 1fr 0.15fr;
+        grid-template-columns: 0.1fr 1fr 0.15fr;
         grid-template-rows: 0.25fr 40rem 0.25fr;
         place-content: center;
     }
